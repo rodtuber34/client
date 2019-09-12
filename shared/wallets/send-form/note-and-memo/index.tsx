@@ -99,7 +99,7 @@ class SecretNote extends React.Component<SecretNoteProps, SecretNoteState> {
               placeholder={`${
                 this.props.toSelf ? 'Add a note to yourself' : 'Add an encrypted note'
               } (in Keybase)`}
-              placeholderColor={placeholderColor}
+              placeholderColor={Styles.globalColors.black_20}
               rowsMin={Styles.isMobile ? 2 : 3}
               rowsMax={8}
               style={styles.input}
@@ -170,7 +170,7 @@ class PublicMemo extends React.Component<PublicMemoProps, PublicMemoState> {
             multiline={true}
             padding={0}
             placeholder="Add a public memo (on Stellar)"
-            placeholderColor={placeholderColor}
+            placeholderColor={Styles.globalColors.black_20}
             style={styles.input}
             rowsMin={Styles.isMobile ? 1 : 2}
             rowsMax={6}
@@ -196,8 +196,6 @@ class PublicMemo extends React.Component<PublicMemoProps, PublicMemoState> {
 const Divider = ({error}: {error: boolean}) => (
   <Kb.Divider style={error ? Styles.collapseStyles([styles.divider, styles.dividerError]) : styles.divider} />
 )
-
-const placeholderColor = Styles.globalColors.black_20
 
 const styles = Styles.styleSheetCreate(
   () =>
